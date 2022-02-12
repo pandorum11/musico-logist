@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Musicologist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3007ca4f07.js" crossorigin="anonymous"></script>  
+  </head>
+  <body>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item active" role="presentation">
+        <a class="nav-link active" id="search-tab" data-toggle="tab" href="#search-page" role="tab" aria-controls="home">Search</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="playlist-tab" data-toggle="tab" href="#playlist-page" role="tab" aria-controls="profile">Playlist</a>
+      </li>
+    </ul>
+    <div class="container">
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade active show" id="search-page" role="tabpanel" aria-labelledby="search-tab">
+        <div class="row">
+            <form class="d-flex">
+            <input style="margin-right: 10px;" type="text" class="form-control" id="musicField" placeholder="Song     Name, Artist...">
+            <button id="addButton" class="btn btn-outline-primary" type="button">Add!</button>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col col-md-2 hidden-sm hidden-xs"></div>
+            <div class="col col-xs-12 col-md-8">              
+              <div id="added_tracks" class="row">
+              </div>
+              <div id="history" class="row">
+                <ul class="list-group info">
+                </ul>
+              </div>
+            </div>
+            <div class="col col-md-2 hidden-sm hidden-xs"></div>
+          </div>
+          <div class="row">
+            <div class="col col-xs-12 text-center">
+              <!-- style="display: none;" -->
+              <div id="spinner_loading" class="spinner"style="position: relative;display: inline-block;">
+              <div class="spinner-border text-secondary" style="position: absolute;right: 10px;top: -19px;" role="status">
+              <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+              <button id="getPlaylistBtn" class="btn btn-dark">Get Playlist</button>
+            </div>
+          </div>
+          <div class="row">
+            <table id="table_results" class="table table-dark table-striped">
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="playlist-page" role="tabpanel" aria-labelledby="playlist-tab">
+            <div class="row">
+            <div class="col col-md-2 hidden-sm hidden-xs"></div>
+            <div class="col col-xs-12 col-md-8">
+              
+              <div id="ready_playlist" class="row">
+                <table id="ready_playlist_table" class="table table-dark table-striped">
+                </table>
+              </div>
+            </div>
+            <div class="col col-md-2 hidden-sm hidden-xs"></div>
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    <script type="text/javascript" src="jQuery-v3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="music.js"></script>
+  </body>
+</html>
+<!-- <i class="fa-solid fa-rectangle-xmark"></i> -->
